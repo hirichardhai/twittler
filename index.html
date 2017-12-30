@@ -13,28 +13,37 @@
 
     </header>
 
+    <section>
+
+    </section>
+
     <script>
 
-      $(document).ready(function(){
-        // $ is for document.queryselectorall('body')
-        var $body = $('body');
+    $(document).ready(function(){
+      // $ is for document.queryselectorall('body')
+      var $body = $('body');
+      var $section = $('section');
 
-        var index = streams.home.length - 1;
-        while(index >= 0){
-          var tweet = streams.home[index];
-          var $tweet = $('<div></div>');
-          var $username = $("<a href=#>ow to" + tweet.user + '</a>');
-          $username.on('click', function() {console.log('hey');})
-          $tweet.text('@' + tweet.user + ': ' + tweet.message);
-          $username.appendTo($body);
+      var index = streams.home.length - 1;
+      while(index >= 0){
+        var tweet = streams.home[index];
+        var $tweet = $('<div></div>');
+        var $username = $("<a href=#>ow to" + tweet.user + '</a>');
+        $username.on('click', reloadUserTweets);
+        $tweet.text('@' + tweet.user + ': ' + tweet.message);
+        $username.appendTo($section);
 
-          $tweet.appendTo($body);
-          index -= 1;
-        }
+        $tweet.appendTo($section);
+        index -= 1;
+      }
 
-      });
+      function reloadUserTweets() {
+        
+      }
 
-    </script>
+    });
+
+  </script>
 
   </body>
 </html>
