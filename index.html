@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang='en'>
   <head>
-    <title></title>
+    <title>Richard's Twittler</title>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, intial-scale=1">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.3/css/bootstrap.min.css" integrity="sha384-Zug+QiDoJOrZ5t4lssLdxGhVrurbmBWopoEl+M6BdEfwnCJZtKxi1KgxUyJq13dy" crossorigin="anonymous">
@@ -10,9 +10,23 @@
     <link rel="stylesheet" href="twitter.css">
   </head>
   <body>
+    <nav class="navbar navbar-default">
+      <div class="container-fluid">
+        <div class="navbar-header">
+          <a class="navbar-brand" href="#">Richard's Twittler</a>
+        </div>
+        <ul class="nav navbar-nav">
+          <li class="active"><a href="#">Home</a></li>
+          <li>Have an account?<a href="#"> Log-in.</a></li>
+          <li><a href="#"></a></li>
+        </ul>
+      </div>
+    </nav>
+    
     <header class ='row'>
-      
-      <div class="container-fluid contain-head"><img src='pictures/skyline.jpg' class="img-responsive">Welcome to Richard's Twittler</div>
+
+      <div><img src='pictures/skyline.jpg' class="img-responsive"></div>
+      <div class="container-fluid contain-head"></div>
 
     </header>
 
@@ -55,9 +69,9 @@
         for (var i = 0; i < streams.users[username].length; i++) {
           var tweet = streams.users[username][i].message;
           var timeStamp = streams.users[username][i].created_at;
-          var $tweet = $('<div class="col-md-7"></div>');
-          var $username = $("<div class'col-md-2 contain-username'><a href=#>" + '@' + username + '</a>');
-          var $timeCreated = $('<div class="col-md-3"></div>')
+          var $tweet = $('<div class="col-md-7 left"></div>');
+          var $username = $("<div class'col-md-2 contain-username right'><a href=#>" + '@' + username + '</a>');
+          var $timeCreated = $('<div class="col-md-3 center "></div>')
           var $userNode = $('<div class="row"></div>')
 
           $tweet.text('@' + username + ': ' + tweet);
