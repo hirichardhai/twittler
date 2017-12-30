@@ -1,0 +1,17 @@
+div {
+	margin: 0 auto;
+	padding-left: 30px;
+	padding-right: 30px;
+	width: 960px;
+	margin-bottom: 22px;
+}
+
+h1 {
+	padding-left: 500px;
+	padding-right: 500px;
+	padding-top:100px;
+	height: 100px;
+	width: 1600px;
+	margin-bottom: 0px;
+	background: #0091ff;
+}
