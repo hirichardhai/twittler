@@ -32,9 +32,6 @@
         var $timeCreated = $('<div></div>')
         var $userNode = $('<div></div>')
 
-
-        // $userNode.addClass()
-
         $tweet.text('@' + tweet.user + ': ' + tweet.message);
         $username.on('click', reloadUserTweets(tweet.user));
         $timeCreated.text('tweeted on ' + tweet.created_at + '.')
@@ -51,9 +48,26 @@
       function reloadUserTweets(username) {
         return function execute() {
         $section.html('');
-        console.log(username)
-        }
+        for (var i = 0; i < streams.users[username].length; i++) {
+          var tweet = streams.users[username][i].message;
+          var timeStamp = streams.users[username][i].created_at;
+          var $tweet = $('<div></div>');
+          var $username = $("<a href=#>" + '@' + username + '</a>');
+          var $timeCreated = $('<div></div>')
+          var $userNode = $('<div></div>')
+
+          $tweet.text('@' + username + ': ' + tweet);
+          $username.on('click', reloadUserTweets(username));
+          $timeCreated.text('tweeted on ' + timeStamp + '.')
+
+
+          $tweet.appendTo($userNode);
+          $username.appendTo($userNode);
+          $timeCreated.appendTo($userNode);
+          $userNode.appendTo($section)
       }
+    }
+  }
 
     });
 

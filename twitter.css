@@ -1,5 +1,4 @@
 
-
 h1 {
 	padding-left: 500px;
 	padding-right: 500px;
@@ -8,4 +7,8 @@ h1 {
 	width: 1600px;
 	margin-bottom: 0px;
 	background: #0091ff;
+}
+
+div {
+	margin: 20px;
 }
