@@ -1,7 +1,11 @@
 .contain-head {
 	background-color:#74d1ea;
-	height:100px;
 }
+
+img {
+	width: 100%;
+}
+
 
 .left {
 	background-color: #ccc;
