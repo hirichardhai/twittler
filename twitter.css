@@ -1,5 +1,5 @@
 .contain-head {
-	background-color:#74d1ea;
+	background-color:#00aced;
 	padding-bottom: 80px;
 }
 
@@ -19,4 +19,13 @@ img {
 .right {
 	background-color: #ccc;
 	font-size: small;
+}
+
+.navbar-default {
+  background-color: #00aced;
+  border-color: #3ffebf;
+}
+
+.navbar-default .navbar-brand {
+  color: #ecf0f1;
 }
