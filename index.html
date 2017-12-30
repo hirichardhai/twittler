@@ -23,22 +23,29 @@
       // $ is for document.queryselectorall('body')
       var $body = $('body');
       var $section = $('section');
-
       var index = streams.home.length - 1;
+
       while(index >= 0){
         var tweet = streams.home[index];
         var $tweet = $('<div></div>');
-        var $username = $("<a href=#>ow to" + tweet.user + '</a>');
-        $username.on('click', reloadUserTweets);
+        var $username = $("<a href=#>" + '@' + tweet.user + '</a>');
+        var $timeCreated = $('<div></div>')
+
         $tweet.text('@' + tweet.user + ': ' + tweet.message);
-        $username.appendTo($section);
+        $username.on('click', reloadUserTweets);
+        $timeCreated.text('tweeted on ' + tweet.created_at + '.')
+
 
         $tweet.appendTo($section);
+        $username.appendTo($section);
+        $timeCreated.appendTo($section);
+
         index -= 1;
       }
 
       function reloadUserTweets() {
-        
+        $section.html('');
+        console.log(tweet.user)
       }
 
     });
