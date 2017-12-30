@@ -1,7 +1,10 @@
 <!DOCTYPE html>
-<html>
+<html lang='en'>
   <head>
+    <title></title>
     <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, intial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.3/css/bootstrap.min.css" integrity="sha384-Zug+QiDoJOrZ5t4lssLdxGhVrurbmBWopoEl+M6BdEfwnCJZtKxi1KgxUyJq13dy" crossorigin="anonymous">
     <script src="jquery.js"></script>
     <script src="data_generator.js"></script>
     <link rel="stylesheet" href="twitter.css">
@@ -9,11 +12,11 @@
   <body>
     <header>
       
-      <h1>Welcome to Richard's Twittler</h1>
+      <h1 class="container-fluid contain-head">Welcome to Richard's Twittler</h1>
 
     </header>
 
-    <section>
+    <section class="container-fluid">
 
     </section>
 
@@ -27,14 +30,15 @@
 
       while(index >= 0){
         var tweet = streams.home[index];
-        var $tweet = $('<div></div>');
-        var $username = $("<a href=#>" + '@' + tweet.user + '</a>');
-        var $timeCreated = $('<div></div>')
-        var $userNode = $('<div></div>')
+        var $tweet = $('<div class="col-sm-7"></div>');
+        var $username = $('<div class="col-sm-2"<a href=#>' + '@' + tweet.user + '</a></div>');
+        var $timeCreated = $('<div class="col-sm-3"></div>')
+        var $userNode = $('<div class="row"></div>')
 
         $tweet.text('@' + tweet.user + ': ' + tweet.message);
+        $timeCreated.text('tweeted on ' + tweet.created_at + '.');
         $username.on('click', reloadUserTweets(tweet.user));
-        $timeCreated.text('tweeted on ' + tweet.created_at + '.')
+
 
 
         $tweet.appendTo($userNode);
@@ -72,6 +76,15 @@
     });
 
   </script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous">
+    
+  </script>
+
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.3/js/bootstrap.min.js" integrity="sha384-a5N7Y/aK3qNeh15eJKGWxsqtnX/wWdSZSKp+81YjTmS15nvnvxKHuzaWwXHDli+4" crossorigin="anonymous">
+    
+  </script>
+
+
 
   </body>
 </html>

@@ -1,14 +1,4 @@
-
-h1 {
-	padding-left: 500px;
-	padding-right: 500px;
-	padding-top:100px;
-	height: 100px;
-	width: 1600px;
-	margin-bottom: 0px;
-	background: #0091ff;
-}
-
-div {
-	margin: 20px;
+.contain-head {
+	background-color:#74d1ea;
+	height:100px;
 }
