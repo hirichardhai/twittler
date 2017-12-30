@@ -30,9 +30,9 @@
 
       while(index >= 0){
         var tweet = streams.home[index];
-        var $tweet = $('<div class="col-md-7"></div>');
-        var $username = $('<div class="col-md-2 contain-username"><a href=#>' + '@' + tweet.user + '</a></div>');
-        var $timeCreated = $('<div class="col-md-3"></div>')
+        var $tweet = $('<div class="col-md-7 left"></div>');
+        var $username = $('<div class="col-md-2 right"><a href=#>' + '@' + tweet.user + '</a></div>');
+        var $timeCreated = $('<div class="col-md-3 center"></div>')
         var $userNode = $('<div class="row"></div>')
 
         $tweet.text('@' + tweet.user + ': ' + tweet.message);
