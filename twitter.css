@@ -8,16 +8,21 @@ img {
 
 .left {
 	background-color: #ccc;
+	padding:10px;
+
 }
 
 .center {
 	background-color: #eee;
 	font-size: small;
+	padding:10px;
 }
 
 .right {
 	background-color: #ccc;
 	font-size: small;
+	padding:10px;
+
 }
 
 .navbar-default {
