@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang='en'>
+
   <head>
     <title>Richard's Twittler</title>
     <meta charset="utf-8">
@@ -9,6 +10,7 @@
     <script src="data_generator.js"></script>
     <link rel="stylesheet" href="twitter.css">
   </head>
+
   <body>
     <nav class="navbar navbar-default">
       <div class="container-fluid">
@@ -24,12 +26,8 @@
     </nav>
 
     <header class ='row'>
-
       <div class="container-fluid contain-head"></div>
-
     </header>
-
-
 
     <section class="container-fluid m ain-container">
 
@@ -90,7 +88,6 @@
           $username.on('click', reloadUserTweets(username));
           $timeCreated.text('tweeted ' + time_ago(timeStamp) + '.')
 
-
           $tweet.appendTo($userNode);
           $timeCreated.appendTo($userNode);
           $username.appendTo($userNode);
@@ -102,14 +99,9 @@
 
   </script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous">
-    
   </script>
-
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.3/js/bootstrap.min.js" integrity="sha384-a5N7Y/aK3qNeh15eJKGWxsqtnX/wWdSZSKp+81YjTmS15nvnvxKHuzaWwXHDli+4" crossorigin="anonymous">
-    
   </script>
-
-
-
+  
   </body>
 </html>
