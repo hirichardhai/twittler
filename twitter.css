@@ -55,7 +55,7 @@ ul.nav li a, ul.nav li a:visited {
 }
 
 .index-intro .jumbotron{
-	padding:150px 100px;
+	padding:190px 10px;
 	margin: 0px;
 	background-image: url('pictures/skyline.jpg');
 	background-size: cover;
@@ -65,5 +65,7 @@ ul.nav li a, ul.nav li a:visited {
 
 .bannerHeading {
   position: absolute;
-  top: 70px;
+  top: 30px;
+  
+  border-radius: 50%;
 ]}
