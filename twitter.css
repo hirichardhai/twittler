@@ -47,12 +47,23 @@ ul.nav li a, ul.nav li a:visited {
 
 .index-intro {
 	width:100%;
+	background-color: #f3f3f3;
+}
+
+.main-container {
+
 }
 
 .index-intro .jumbotron{
-	padding:100px 60px;
+	padding:150px 100px;
 	margin: 0px;
 	background-image: url('pictures/skyline.jpg');
 	background-size: cover;
-	background-repeat: no;
+	background-repeat: no-repeat;
+	color: white;
 }
+
+.bannerHeading {
+  position: absolute;
+  top: 70px;
+]}
