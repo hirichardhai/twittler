@@ -65,14 +65,13 @@
         var $userNode = $('<div class="row"></div>');
 
         $tweet.text('@' + tweet.user + ': ' + tweet.message);
-        $timeCreated.text('tweeted on ' + tweet.created_at + '.');
+        $timeCreated.text('tweeted ' + time_ago(tweet.created_at) + '.');
         $username.on('click', reloadUserTweets(tweet.user));
 
         $tweet.appendTo($userNode);
         $timeCreated.appendTo($userNode);
         $username.appendTo($userNode);
-        $userNode.appendTo($section)
-console.log(tweet.created_at)
+        $userNode.appendTo($section);
         index -= 1;
       }
 
@@ -89,7 +88,7 @@ console.log(tweet.created_at)
 
           $tweet.text('@' + username + ': ' + tweet);
           $username.on('click', reloadUserTweets(username));
-          $timeCreated.text('tweeted on ' + timeStamp + '.')
+          $timeCreated.text('tweeted ' + time_ago(timeStamp) + '.')
 
 
           $tweet.appendTo($userNode);
