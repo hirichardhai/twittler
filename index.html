@@ -13,10 +13,10 @@
     <nav class="navbar navbar-default">
       <div class="container-fluid">
         <div class="navbar-header">
-          <a class="navbar-brand" href="#"><strong>Richard's Twittler</strong></a>
+          <a class="navbar-brand" href="index.html"><strong>Richard's Twittler</strong></a>
         </div>
         <ul class="nav navbar-nav">
-          <li class="active"><a href="#">Home</a></li>
+          <li class="active"><a href="index.html">Home</a></li>
           <li><em>Have an account?</em><a href="#"> Log-in.</a></li>
           <li><a href="#"></a></li>
         </ul>
@@ -61,8 +61,8 @@
         var tweet = streams.home[index];
         var $tweet = $('<div class="col-md-7 left"></div>');
         var $username = $('<div class="col-md-2 right"><a href=#>' + '@' + tweet.user + '</a></div>');
-        var $timeCreated = $('<div class="col-md-3 center"></div>')
-        var $userNode = $('<div class="row"></div>')
+        var $timeCreated = $('<div class="col-md-3 center"></div>');
+        var $userNode = $('<div class="row"></div>');
 
         $tweet.text('@' + tweet.user + ': ' + tweet.message);
         $timeCreated.text('tweeted on ' + tweet.created_at + '.');
@@ -72,7 +72,7 @@
         $timeCreated.appendTo($userNode);
         $username.appendTo($userNode);
         $userNode.appendTo($section)
-
+console.log(tweet.created_at)
         index -= 1;
       }
 
